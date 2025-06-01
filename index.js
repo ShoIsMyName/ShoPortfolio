@@ -95,3 +95,23 @@ a.innerHTML = `
 `;
 kl.appendChild(a);
 });
+
+
+// My skills | Code-language
+const MyCertificate = [
+    { text: "NCSA MOOC", img: "Certificate/NCSA MOOC 1.jpg" },
+    { text: "Ethical Hacking Essentials", img: "Certificate/Ethical Hacking Essentials.png" },
+    { text: "Network defense Essentials", img: "Certificate/Network defense Essentials.png" }
+];
+
+const MyCert = document.getElementById("MyCert");
+
+MyCertificate.forEach(MyCertificate => {
+const divCert = document.createElement("div");
+divCert.className = "grid-container-myproject";
+divCert.innerHTML = `
+    <img src="${MyCertificate.img}" alt="${MyCertificate.text}">
+    <div><h1>${MyCertificate.text}</h1></div><br>
+`;
+MyCert.appendChild(divCert);
+});
