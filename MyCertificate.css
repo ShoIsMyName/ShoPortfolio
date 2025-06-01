@@ -1,0 +1,425 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+    background-color: #000000 !important;
+}
+
+
+/* Video-background */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+
+/* Header-bar */
+.header-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 60px;
+    background: linear-gradient(to right, #282828, #3c3c3c);
+    color: white;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    font-size: 1.0rem;
+    left: 0%;
+    top: 0%;
+}
+
+.head-bar-logo {
+    font-size: 2.5em;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    padding: 15px 60px;
+}
+
+
+/* Option bar */
+.nav-links {
+    display: flex;
+    gap: 35px;
+    padding: 0px 60px;
+    transition: all 0.3s ease;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-block;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: all 0.3s ease;
+    background-image: url();
+    padding: 15px 10px;
+}
+
+.nav-links a:hover {
+    padding: 15px 50px;
+    font-family: cursive, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #97c8ff;
+    background-color: #4c4c4c;
+    display: inline-block;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 1px;
+    z-index: 1100;
+}
+
+.menu-toggle span {
+    height: 5px;
+    width: 25px;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Animation toggle */
+.menu-toggle.active span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    transform: translateY(0px) rotate(-45deg);
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: translateY(10px) rotate(0deg);
+    opacity: 0;
+}
+
+.note {
+    /* position: relative;
+    display:inline-flexbox; */
+    background-color: #202020;
+    color: #fff;
+
+    opacity: 1.0;
+    font-size: 1.0rem;
+    text-align: center;
+    border-radius: 0px;
+
+    /* margin-top: 200px; */
+    padding: 60px 80px;
+
+}
+
+.grid-container-aboutme {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 1%;
+    background-color: #202020;
+    box-shadow: 0 55px 95px rgba(0, 0, 0, 1);
+    
+}
+
+.quote {
+    color: #636363;
+    font-family: monospace;
+    text-align: left;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Header note */
+.head-box {
+    margin-top: 90px;
+}
+
+/* My skills */
+
+.grid-container-myskills {
+    display: flex;
+    gap: 5rem;
+    text-align: left;
+    justify-content: center;
+}
+
+.grid-container-myskills-section {
+    margin-top: 120px;
+}
+
+.grid-container-myskills-section a span {
+    opacity: 0.45;
+}
+
+.skill-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 12px;
+    color: white;
+    text-decoration: none;
+}
+
+.skill-item-list,
+.skill-item-list-short {
+    display: list-item;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+    color: white;
+    text-decoration: none;
+}
+
+/* Contact */
+.container-contact {
+    display: flex;
+    background-color: #000000;
+    color: white;
+    height: 100%;
+    max-height: 290px;
+    margin-top: 220px;
+
+    font-size: 20px; 
+    padding-left: 12%; 
+    padding-bottom: 12%;
+    opacity: 0.8;
+}
+
+@media (min-width: 611px) {
+    /* Content */
+    .first-content {
+        position: relative;
+        display: inline-flex;
+        justify-content: center;
+        background-color: #fff;
+        width: 24%;
+
+        padding: 1% 1%;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.2);
+
+        opacity: 0.95;
+        top: 160px;
+        left: 80px;
+    }
+    .first-content img {
+        width: 40%;
+        height: 40%;
+        padding-right: 20px;
+    }
+    .first-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .logo-project {
+        font-size: 110px;
+        font-family: fantasy; 
+        text-align: center; 
+        color: rgb(255, 255, 255);
+    }
+
+    .grid-container-aboutme div img{
+        opacity: 1;
+        width: 79%;
+        margin-top: 84px; 
+        margin-left: 25%;
+    }
+
+    .grid-container-aboutme div div div img{
+        opacity: 0;
+        width: 0%;
+        margin-top: 0px; 
+        margin-left: 0%;
+    }
+    
+    /* My project */
+    .grid-container-myproject {
+        font-family:'Courier New', Courier, monospace;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1%;
+        color: white;
+    }
+
+    .grid-container-myproject img {
+        width: 40%; 
+        display: grid; 
+        margin-top: 80px; 
+        margin-left: 25%;
+    }
+
+    .grid-container-myproject div{
+        display: grid; 
+        color: white; 
+        font-family: monospace; 
+        margin-top: 80px; 
+        margin-right: 25%;
+    }
+    .grid-container-myproject div h1{
+        font-size: 25px;
+    }
+}
+
+/* PHONE */
+@media (max-width: 610px) {
+
+    .first-content {
+        position: relative;
+        display: inline-flex;
+        justify-content: center;
+        background-color: #fff;
+        justify-content: space-between;
+        width: 70%;
+    
+        padding: 18px 10px;
+        font-size: 1.9rem;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    
+        opacity: 0.95;
+        top: 160px;
+        left: 50px;
+    }
+    .first-content img {
+        width: 50%;
+    }
+
+    .menu-toggle {
+        display: inline-flex;
+        flex-direction: column;
+        cursor: pointer;
+        gap: 12%;
+        margin-top: 3%;
+        /* z-index: 1100; */
+    }
+    
+    .menu-toggle span {
+        height: 4px;
+        width: 25px;
+        background: white;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+    
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 30px;
+        flex-direction: column;
+        background-color: #2a2a2a;
+        padding: 20px;
+        border-radius: 10px;
+        gap: 15px;
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .grid-container-aboutme {
+        display:grid;
+        grid-template-columns: 1fr;
+        gap: 0%;
+        background-color: #202020;
+        box-shadow: 0 55px 95px rgba(0, 0, 0, 1);
+        width: 100%;
+        padding-bottom: 10px;
+    }
+
+    .grid-container-aboutme div{
+        justify-content: center;
+    }
+
+    .grid-container-aboutme div img{
+        opacity: 0;
+        width: 0%;
+        margin-top: 0px; 
+        margin-left: 0%;
+    }
+
+    .grid-container-aboutme div div div img{
+        opacity: 1;
+        width: 100%;
+        margin-top: 50px; 
+        margin-left: 0%;
+    }
+
+    .grid-container-myskills {
+        display: grid;
+    }
+
+    .logo-project {
+        padding-top: 10px;
+        font-size: 2.7rem;
+        font-family: fantasy; 
+        text-align: center; 
+        color: rgb(255, 255, 255);
+    }
+
+    .container-contact{
+        font-size: 0.8rem;
+    }
+
+    /* My project */
+    .grid-container-myproject {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1%;
+        color: white;
+    }
+
+    .grid-container-myproject img {
+        width: 40%; 
+        display: inline-flexbox; 
+        margin-top: 80px; 
+        margin-left: 25%;
+    }
+
+    .grid-container-myproject div {
+        display: inline-flexbox; 
+        color: white; 
+        font-family: monospace; 
+        margin-top: 80px; 
+        margin-right: 10%;
+        margin-left: 10%;
+    }
+
+    .header-bar {
+        display: flex;
+        /* justify-content: space-between; */
+        padding: 15px 42px;
+        background: linear-gradient(to right, #282828, #3c3c3c);
+        color: white;
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+        position: fixed;
+        width: 100%;
+        z-index: 999;
+        font-size: 1.0rem;
+    }
+
+    .head-bar-logo {
+        font-size: 2.5em;
+        font-weight: bold;
+        text-decoration: none;
+        color: #fff;
+        padding: 15px 0px;
+    }
+
+    .grid-container-myproject div h1{
+        font-size: 20px;
+    }
+}
