@@ -30,7 +30,6 @@ body {
     padding: 15px 60px;
     background: linear-gradient(to right, #282828, #3c3c3c);
     color: white;
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
     position: fixed;
     width: 100%;
     z-index: 999;
@@ -195,6 +194,28 @@ body {
     opacity: 0.8;
 }
 
+/* My project */
+.more-cert{
+    justify-content: center;
+    text-align: center;
+    margin-top: 60px;
+}
+.more-cert a{
+    background-color: rgba(112, 112, 112, 0.5);
+    font-family: 'Courier New', Courier, monospace;
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 30px;
+    transition: all 0.3s ease;
+}
+.more-cert a:hover{
+    background-color: rgba(112, 112, 112, 1);
+    transition: all 0.3s ease;
+}
+
 @media (min-width: 611px) {
     /* Content */
     .first-content {
@@ -268,8 +289,37 @@ body {
         margin-top: 80px; 
         margin-right: 25%;
     }
+
+    /* My project */
+    .grid-container-myproject {
+        font-family:'Courier New', Courier, monospace;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1%;
+        color: white;
+    }
+
+    .grid-container-myproject img {
+        width: 40%; 
+        display: grid; 
+        margin-top: 80px; 
+        margin-left: 25%;
+    }
+
+    .grid-container-myproject div{
+        display: grid; 
+        color: white; 
+        font-family: monospace; 
+        margin-top: 80px; 
+        margin-right: 25%;
+    }
+    .grid-container-myproject div h1{
+        font-size: 25px;
+    }
+
 }
 
+/* PHONE */
 @media (max-width: 610px) {
 
     .first-content {
@@ -360,7 +410,7 @@ body {
 
     .logo-project {
         padding-top: 10px;
-        font-size: 3.5rem;
+        font-size: 2.7rem;
         font-family: fantasy; 
         text-align: center; 
         color: rgb(255, 255, 255);
@@ -413,5 +463,9 @@ body {
         text-decoration: none;
         color: #fff;
         padding: 15px 0px;
+    }
+    
+    .grid-container-myproject div h1{
+        font-size: 20px;
     }
 }
